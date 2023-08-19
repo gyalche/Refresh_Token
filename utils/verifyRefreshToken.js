@@ -3,7 +3,6 @@ import userToken from 'jsonwebtoken';
 
 const verifyRefreshToken = (refreshToken) => {
   const privateKey = 'dawadon';
-
   return new Promise((resolve, reject) => {
     UserToken.findOne({ token: refreshToken }, (err, doc) => {
       if (!doc) {
